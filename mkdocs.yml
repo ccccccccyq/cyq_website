@@ -1,0 +1,150 @@
+site_name: cyq's website
+
+nav:
+  - 主页: index.md
+  - 行驿:
+    - 我的旅行地图: travel/My_Travel_Map.md
+    - 上海: travel/Shanghai_Travel_Guide_Collection.md
+    - 北疆10日游: 
+      - 行程安排: travel/BeiJiang_Travel/BeiJiang_Travel_Guide.md
+      - 景点攻略: travel/BeiJiang_Travel/Tourist_Attractions.md
+      - 注意事项: travel/BeiJiang_Travel/Precautions.md
+  - 草算录:
+    - 数据结构与算法: courses/Data_Structures_&_Algorithm_in_Python.md
+    - 嵌入式与芯片系统设计: courses/Embedded_Systems.md
+    - 半导体物理: courses/Semiconductor_Fundamentals.md
+    - 信号与系统: courses/Signals_and_Systems.md
+    - 数字信号处理: courses/Digital_Signal_Processing.md
+    - 微处理器: courses/Microprocessors.md
+    - 集成电路: courses/Integrated_Electronics.md
+    - Dijkstra算法时间复杂度: courses/Time_Complexity_of_Dijkstra_Algorithm.md
+  - 术册:
+    - Markdown语法简介: tutorials/Markdown_Syntax_Introduction.md
+  - 味笺:
+    - 箸间漫谈: recipes/My_Opinions.md
+    - 山水之味: recipes/Good_Tastes.md
+  - 浮生他记:
+    - 我的生活小站: others/cccccyq的生活小站.md
+
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+  # following codes enables admonitions and annotations
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - md_in_html
+
+  # following code enables syntax highlighting on code blocks and
+  # inline code blocks 
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+
+  # following code adds the ability to define inline footnotes, 
+  # which are then rendered below all Markdown content of a document.
+  - footnotes
+
+# below is for the admonitaion extension
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.arithmatex:
+      generic: true
+
+plugins:
+  # - search
+  # - jekyll-last-modified-at
+
+
+theme:
+  name: 'material'
+  # favicon: octicons/question-16
+  font:
+    text: 'Times new roman'
+    # text: 'Bookman-Old-Style'
+
+  icon:
+    logo: simple/clerk
+    menu: fontawesome/solid/bars
+    
+    admonition:
+      note: material/notebook
+      abstract: material/format-list-bulleted
+      info: octicons/info-16
+      tip: material/lightbulb-on
+      success: octicons/check-16
+      question: octicons/question-16
+      warning: octicons/alert-16
+      failure: octicons/x-circle-16
+      danger: octicons/zap-16
+      bug: octicons/bug-16
+      example: material/pencil-outline
+      quote: fontawesome/solid/quote-right
+    
+    annotation: material/star-four-points-circle
+    
+
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
+
+  features: 
+    # allow visitors to copy your code blocks' contents to the clipboard
+    - content.code.copy
+    # - content.code.select
+    # - content.code.annotate
+    # - content.code.toggle
+    - content.footnote.tooltips
+    # - search.suggest
+    # - search.highlight
+
+  palette:
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light blue
+      accent: orange
+      toggle:
+        icon: material/brightness-7 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: light blue
+      accent: orange
+      toggle: 
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+    - stylesheets/extra.css
+    # - themes/css/custom.css
+    # - themes/css/simpleLightbox.min.css
+    # - themes/css/pied_piper.css
+    - https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css
+    - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - https://cdn.jsdelivr.net/gh/TRHX/CDN-for-itrhx.com@3.0.8/js/maodian.js
+  # 上一行代码可以实现鼠标点击特效
+  # - javascripts/tex-mml-chtml.js
+
+extra:
+  homepage: https://example.com
+
+# search:
+#   exclude: true
+
